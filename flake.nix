@@ -14,7 +14,6 @@
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
           nodejs_24
-          typescript
 
           libGL
           glib
@@ -74,6 +73,10 @@
           pango
           libgbm
         ]);
+
+        shellHook = ''
+          export PATH="$(pwd)/node_modules/.bin:$PATH"
+        '';
       };
     };
 }
