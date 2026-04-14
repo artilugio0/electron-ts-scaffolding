@@ -4,8 +4,7 @@
   "description": "",
   "main": "dist/main/main.js",
   "scripts": {
-    "dev:renderer": "tsc --noEmit -p tsconfig.renderer.json && vite --config vite.config.ts",
-    "start": "npm run build:renderer && npm run build:main && NODE_ENV=development electron .",
+    "dev:start": "./scripts/dev-start.sh",
     "build": "npm run build:renderer && npm run build:main",
     "build:main": "tsc -p tsconfig.main.json",
     "build:renderer": "tsc --noEmit -p tsconfig.renderer.json && vite build --config vite.config.ts"

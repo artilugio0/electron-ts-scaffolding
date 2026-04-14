@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "commonjs",
-    "strict": true
+    "module": "CommonJS",
+    "strict": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "paths": {
+      "@shared/*": ["./src/shared/*"]
+    }
   }
 }
 
